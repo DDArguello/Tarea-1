@@ -1,6 +1,4 @@
 #Tarea 1
-#Hola Ing, este comentario es para informarle que solo me hicieron falta 3 ejercicios, los 2 primeros que me olvide copiar y el 15 
-# que decidi no ponerlo, gracias por entender Saludos, a lo que lo ejecuta le pedira elejir entre los 34 ejercicios usted elije cual ejecutar! 
 import math
 import datetime
 import collections
@@ -11,10 +9,19 @@ class Tarea1:
         self.mensaje=titulo
     
     def ejercicio1(self):
-        pass
+        print("'Hola mundo' --> string\nVerdadero --> Booleano\n  -->None\n„1 --> syntax error\n„c' --> syntax error\n256 --> entero\n8>19 --> Booleano")
 
     def ejercicio2(self):
-        pass
+        x=(5-3*2)+9>3*5*14%3
+        print(f"(5-3*2)+9>3*5*14%3 = {x} --> {type(x)}")
+        x=2*(4-10+8)/2*36*(1/2)
+        print(f"2*(4-10+8)/2*36*(1/2) = {x}--> {type(x)}")
+        x=260/12+54%3-85%7
+        print(f"260/12+54%3-85%7 = {x}--> {type(x)}")
+        x=(48<2*30)or(2*7<12)
+        print(f"(48<2*30)||(2*7<12) = {x}--> {type(x)}")
+        x=((8>2)or(932<23))and 4==2
+        print(f"((8>2)||(932<23))&& 4==2 = {x}--> {type(x)}")
 
     def ejercicio3(self):
         lista=[0]*2
@@ -151,7 +158,33 @@ class Tarea1:
         print(f"El segundo numero mayor es: {min(lista)}")
 
     def ejercicio15(self):
-        pass
+        Hentrada=['']*2
+        opc=['Hora de entrada', 'Horario AM(A) O PM(P)']
+        indice=0
+        while indice<2:
+            while Hentrada[indice]<='':
+                Hentrada[indice]=input(f"Ingrese {opc[0+indice]}: ")
+            indice+=1
+        Hsalida=['']*3
+        opc=['Hora de salida', 'Horario AM(A) O PM(P)']
+        indice=0
+        while indice<2:
+            while Hsalida[indice]<='':
+                Hsalida[indice]=input(f"Ingrese {opc[0+indice]}: ")
+            indice+=1
+        Htot=[Hsalida[0],Hentrada[0]]
+        Htot=Htot[0-1]
+        x = [i for i in str(Htot)]
+        lista=['']*2
+        lista [0]= x[0]+x[1]
+        lista [1]= x[2]+x[3]
+        Hora = int(lista[0])*4
+        minutos=int(lista[1])
+        if minutos>30:
+            Hora+=2.50
+            print(f"Su valor a pagar es de: ${Hora}" )
+        else:
+            print(f"Su valor a pagar es de: ${Hora}" )
 
     def ejercicio16(self):
         peso=float(input("Ingrese su peso en libras: "))
